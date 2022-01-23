@@ -30,3 +30,6 @@ class UserRegistration(models.Model):
     Contactnumber=models.CharField(max_length=10)
     Address=models.CharField(max_length=10)
     ProfilePicture=models.ImageField(default="default.png",blank=True,upload_to="images/")
+
+    def __str__(self):
+        return self.Name
